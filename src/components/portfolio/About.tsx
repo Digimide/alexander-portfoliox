@@ -10,8 +10,8 @@ const stats = [
 
 export function About() {
   return (
-    <section id="about" className="relative py-28 sm:py-36">
-      <div className="mx-auto max-w-7xl px-6">
+    <section id="about" className="relative py-20 sm:py-28 lg:py-36">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
           <motion.div
             initial={{ opacity: 0, x: -30 }}

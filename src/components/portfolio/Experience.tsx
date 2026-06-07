@@ -41,8 +41,8 @@ const timeline = [
 
 export function Experience() {
   return (
-    <section id="experience" className="relative py-28 sm:py-36">
-      <div className="mx-auto max-w-5xl px-6">
+    <section id="experience" className="relative py-20 sm:py-28 lg:py-36">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
           <p className="mb-4 text-xs uppercase tracking-[0.2em] text-primary">Journey</p>
           <h2 className="font-display text-4xl font-semibold tracking-tight sm:text-5xl">

@@ -13,9 +13,9 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-28 sm:py-36">
+    <section id="contact" className="relative py-20 sm:py-28 lg:py-36">
       <div className="absolute inset-x-0 top-0 -z-10 mx-auto h-[400px] max-w-5xl bg-hero-glow opacity-60" />
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="grid gap-12 lg:grid-cols-5">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -93,7 +93,7 @@ export function Contact() {
 
             <button
               type="submit"
-              className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-glow transition-transform hover:scale-[1.02] sm:w-auto"
+              className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-primary px-4 sm:px-6 py-3 text-sm font-medium text-primary-foreground shadow-glow transition-transform hover:scale-[1.02] sm:w-auto"
             >
               {sent ? "Message sent — talk soon" : "Send message"}
               <Send className="h-4 w-4" />
