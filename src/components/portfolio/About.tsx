@@ -10,8 +10,8 @@ const stats = [
 
 export function About() {
   return (
-    <section id="about" className="relative py-28 sm:py-36">
-      <div className="mx-auto max-w-7xl px-6">
+    <section id="about" className="relative py-20 sm:py-28 lg:py-36">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -21,7 +21,7 @@ export function About() {
             className="relative"
           >
             <div className="absolute -inset-6 -z-10 rounded-[2rem] bg-gradient-primary opacity-20 blur-2xl" />
-            <div className="overflow-hidden rounded-3xl border border-white/10 shadow-elegant">
+            <div className="overflow-hidden rounded-3xl border border-foreground/10 shadow-elegant">
               <img
                 src={portrait}
                 alt="Alexander, software engineer"
@@ -59,7 +59,7 @@ export function About() {
               </p>
             </div>
 
-            <dl className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] sm:grid-cols-4">
+            <dl className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-foreground/10 bg-foreground/[0.04] sm:grid-cols-4">
               {stats.map((s) => (
                 <div key={s.label} className="bg-card/40 p-5">
                   <dt className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">

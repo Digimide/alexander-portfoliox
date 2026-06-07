@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const links = [
   { href: "#about", label: "About" },
@@ -31,7 +32,7 @@ export function Navbar() {
         scrolled ? "py-3" : "py-5"
       }`}
     >
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div
           className={`flex items-center justify-between rounded-full px-5 py-2.5 transition-all duration-500 ${
             scrolled ? "glass shadow-elegant" : "bg-transparent"
@@ -49,29 +50,29 @@ export function Navbar() {
               <a
                 key={l.href}
                 href={l.href}
-                className="rounded-full px-4 py-2 text-sm text-muted-foreground transition-colors hover:bg-white/5 hover:text-foreground"
+                className="rounded-full px-4 py-2 text-sm text-muted-foreground transition-colors hover:bg-foreground/5 hover:text-foreground"
               >
                 {l.label}
               </a>
             ))}
           </nav>
 
-          <div className="hidden md:block">
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
             <a
               href="#contact"
-              className="inline-flex items-center justify-center rounded-full bg-gradient-primary px-5 py-2 text-sm font-medium text-primary-foreground shadow-glow transition-transform hover:scale-[1.03]"
+              className="hidden md:inline-flex items-center justify-center rounded-full bg-gradient-primary px-5 py-2 text-sm font-medium text-primary-foreground shadow-glow transition-transform hover:scale-[1.03]"
             >
               Book a Call
             </a>
+            <button
+              onClick={() => setOpen((v) => !v)}
+              aria-label="Toggle menu"
+              className="grid h-9 w-9 place-items-center rounded-full glass md:hidden"
+            >
+              {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+            </button>
           </div>
-
-          <button
-            onClick={() => setOpen((v) => !v)}
-            aria-label="Toggle menu"
-            className="grid h-9 w-9 place-items-center rounded-full glass md:hidden"
-          >
-            {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
-          </button>
         </div>
 
         {open && (
@@ -85,7 +86,7 @@ export function Navbar() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="rounded-xl px-4 py-2.5 text-sm text-muted-foreground hover:bg-white/5 hover:text-foreground"
+                className="rounded-xl px-4 py-2.5 text-sm text-muted-foreground hover:bg-foreground/5 hover:text-foreground"
               >
                 {l.label}
               </a>

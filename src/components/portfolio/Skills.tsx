@@ -31,8 +31,8 @@ const groups = [
 
 export function Skills() {
   return (
-    <section id="skills" className="relative py-28 sm:py-36">
-      <div className="mx-auto max-w-7xl px-6">
+    <section id="skills" className="relative py-20 sm:py-28 lg:py-36">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
           <p className="mb-4 text-xs uppercase tracking-[0.2em] text-primary">Toolbelt</p>
           <h2 className="font-display text-4xl font-semibold tracking-tight sm:text-5xl">
@@ -63,7 +63,7 @@ export function Skills() {
                   {g.items.map((it) => (
                     <li
                       key={it}
-                      className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-muted-foreground transition-colors group-hover:text-foreground"
+                      className="rounded-full border border-foreground/10 bg-foreground/[0.04] px-3 py-1 text-xs text-muted-foreground transition-colors group-hover:text-foreground"
                     >
                       {it}
                     </li>

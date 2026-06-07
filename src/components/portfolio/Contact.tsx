@@ -13,9 +13,9 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-28 sm:py-36">
+    <section id="contact" className="relative py-20 sm:py-28 lg:py-36">
       <div className="absolute inset-x-0 top-0 -z-10 mx-auto h-[400px] max-w-5xl bg-hero-glow opacity-60" />
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="grid gap-12 lg:grid-cols-5">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -46,9 +46,9 @@ export function Contact() {
                 <a
                   key={label}
                   href={href}
-                  className="group flex items-center gap-3 rounded-xl glass px-4 py-3 text-sm transition-colors hover:bg-white/10"
+                  className="group flex items-center gap-3 rounded-xl glass px-4 py-3 text-sm transition-colors hover:bg-foreground/10"
                 >
-                  <span className="grid h-9 w-9 place-items-center rounded-lg bg-white/5 text-primary">
+                  <span className="grid h-9 w-9 place-items-center rounded-lg bg-foreground/5 text-primary">
                     <Icon className="h-4 w-4" />
                   </span>
                   <span className="text-foreground/90 group-hover:text-foreground">
@@ -65,7 +65,7 @@ export function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="glass relative rounded-3xl p-8 shadow-elegant lg:col-span-3"
+            className="glass relative rounded-3xl p-6 sm:p-8 shadow-elegant lg:col-span-3"
           >
             <div className="grid gap-5 sm:grid-cols-2">
               <Field id="name" label="Name" placeholder="Jane Doe" required />
@@ -86,14 +86,14 @@ export function Contact() {
                   rows={5}
                   required
                   placeholder="What are you building? Timeline? Budget range?"
-                  className="w-full resize-none rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/70 outline-none transition focus:border-primary/60 focus:ring-2 focus:ring-primary/30"
+                  className="w-full resize-none rounded-xl border border-foreground/10 bg-foreground/[0.04] px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/70 outline-none transition focus:border-primary/60 focus:ring-2 focus:ring-primary/30"
                 />
               </div>
             </div>
 
             <button
               type="submit"
-              className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-glow transition-transform hover:scale-[1.02] sm:w-auto"
+              className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-primary px-4 sm:px-6 py-3 text-sm font-medium text-primary-foreground shadow-glow transition-transform hover:scale-[1.02] sm:w-auto"
             >
               {sent ? "Message sent — talk soon" : "Send message"}
               <Send className="h-4 w-4" />
@@ -132,7 +132,7 @@ function Field({
         required={required}
         placeholder={placeholder}
         maxLength={200}
-        className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/70 outline-none transition focus:border-primary/60 focus:ring-2 focus:ring-primary/30"
+        className="w-full rounded-xl border border-foreground/10 bg-foreground/[0.04] px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/70 outline-none transition focus:border-primary/60 focus:ring-2 focus:ring-primary/30"
       />
     </div>
   );

@@ -3,7 +3,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative isolate overflow-hidden pt-40 pb-24 sm:pt-48 sm:pb-32">
+    <section className="relative isolate overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-24 lg:pt-48 lg:pb-32">
       {/* gradient & grid backdrops */}
       <div className="absolute inset-0 -z-10 bg-hero-glow" aria-hidden />
       <div className="absolute inset-0 -z-10 grid-bg" aria-hidden />
@@ -15,7 +15,7 @@ export function Hero() {
         <div className="absolute left-[40%] bottom-[10%] h-64 w-64 rounded-full bg-primary-glow/15 blur-3xl animate-float" />
       </div>
 
-      <div className="mx-auto max-w-5xl px-6 text-center">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -30,7 +30,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.05 }}
-          className="font-display text-5xl font-semibold tracking-tight sm:text-6xl md:text-7xl lg:text-[5.25rem] lg:leading-[1.05]"
+          className="font-display text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl md:text-7xl lg:text-[5.25rem] lg:leading-[1.05]"
         >
           <span className="text-foreground">I build </span>
           <span className="text-gradient">high-performance software</span>
@@ -56,14 +56,14 @@ export function Hero() {
         >
           <a
             href="#projects"
-            className="group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-glow transition-transform hover:scale-[1.03]"
+            className="group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-4 sm:px-6 py-3 text-sm font-medium text-primary-foreground shadow-glow transition-transform hover:scale-[1.03]"
           >
             View my work
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-white/10"
+            className="inline-flex items-center gap-2 rounded-full glass px-4 sm:px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-foreground/10"
           >
             Book a call
           </a>

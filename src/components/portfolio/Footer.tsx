@@ -2,8 +2,8 @@ import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/5 py-12">
-      <div className="mx-auto max-w-7xl px-6">
+    <footer className="border-t border-foreground/5 py-12">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
           <div className="flex items-center gap-2 font-semibold tracking-tight">
             <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-primary text-sm font-bold text-primary-foreground">
@@ -30,7 +30,7 @@ export function Footer() {
                 key={label}
                 href={href}
                 aria-label={label}
-                className="grid h-9 w-9 place-items-center rounded-full border border-white/10 bg-white/[0.04] text-muted-foreground transition-colors hover:bg-white/10 hover:text-foreground"
+                className="grid h-9 w-9 place-items-center rounded-full border border-foreground/10 bg-foreground/[0.04] text-muted-foreground transition-colors hover:bg-foreground/10 hover:text-foreground"
               >
                 <Icon className="h-4 w-4" />
               </a>
