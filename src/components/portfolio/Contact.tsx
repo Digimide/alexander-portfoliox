@@ -65,7 +65,7 @@ export function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="glass relative rounded-3xl p-8 shadow-elegant lg:col-span-3"
+            className="glass relative rounded-3xl p-6 sm:p-8 shadow-elegant lg:col-span-3"
           >
             <div className="grid gap-5 sm:grid-cols-2">
               <Field id="name" label="Name" placeholder="Jane Doe" required />

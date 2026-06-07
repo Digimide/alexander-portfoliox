@@ -3,7 +3,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative isolate overflow-hidden pt-40 pb-24 sm:pt-48 sm:pb-32">
+    <section className="relative isolate overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-24 lg:pt-48 lg:pb-32">
       {/* gradient & grid backdrops */}
       <div className="absolute inset-0 -z-10 bg-hero-glow" aria-hidden />
       <div className="absolute inset-0 -z-10 grid-bg" aria-hidden />
@@ -30,7 +30,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.05 }}
-          className="font-display text-5xl font-semibold tracking-tight sm:text-6xl md:text-7xl lg:text-[5.25rem] lg:leading-[1.05]"
+          className="font-display text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl md:text-7xl lg:text-[5.25rem] lg:leading-[1.05]"
         >
           <span className="text-foreground">I build </span>
           <span className="text-gradient">high-performance software</span>

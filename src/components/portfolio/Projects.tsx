@@ -72,7 +72,7 @@ export function Projects() {
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
-                <div className="flex flex-col justify-between gap-8 p-8 sm:p-10 lg:col-span-5">
+                <div className="flex flex-col justify-between gap-6 p-6 sm:p-8 lg:p-10 lg:col-span-5">
                   <div>
                     <h3 className="font-display text-2xl font-semibold tracking-tight sm:text-3xl">
                       {p.name}
