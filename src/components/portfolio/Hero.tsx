@@ -63,7 +63,7 @@ export function Hero() {
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-white/10"
+            className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-foreground/10"
           >
             Book a call
           </a>

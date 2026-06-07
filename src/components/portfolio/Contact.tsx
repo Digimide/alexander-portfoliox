@@ -46,9 +46,9 @@ export function Contact() {
                 <a
                   key={label}
                   href={href}
-                  className="group flex items-center gap-3 rounded-xl glass px-4 py-3 text-sm transition-colors hover:bg-white/10"
+                  className="group flex items-center gap-3 rounded-xl glass px-4 py-3 text-sm transition-colors hover:bg-foreground/10"
                 >
-                  <span className="grid h-9 w-9 place-items-center rounded-lg bg-white/5 text-primary">
+                  <span className="grid h-9 w-9 place-items-center rounded-lg bg-foreground/5 text-primary">
                     <Icon className="h-4 w-4" />
                   </span>
                   <span className="text-foreground/90 group-hover:text-foreground">
@@ -86,7 +86,7 @@ export function Contact() {
                   rows={5}
                   required
                   placeholder="What are you building? Timeline? Budget range?"
-                  className="w-full resize-none rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/70 outline-none transition focus:border-primary/60 focus:ring-2 focus:ring-primary/30"
+                  className="w-full resize-none rounded-xl border border-foreground/10 bg-foreground/[0.04] px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/70 outline-none transition focus:border-primary/60 focus:ring-2 focus:ring-primary/30"
                 />
               </div>
             </div>
@@ -132,7 +132,7 @@ function Field({
         required={required}
         placeholder={placeholder}
         maxLength={200}
-        className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/70 outline-none transition focus:border-primary/60 focus:ring-2 focus:ring-primary/30"
+        className="w-full rounded-xl border border-foreground/10 bg-foreground/[0.04] px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/70 outline-none transition focus:border-primary/60 focus:ring-2 focus:ring-primary/30"
       />
     </div>
   );

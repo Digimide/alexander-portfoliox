@@ -50,7 +50,7 @@ export function Experience() {
           </h2>
         </div>
 
-        <ol className="relative mt-16 space-y-10 border-l border-white/10 pl-8 sm:pl-12">
+        <ol className="relative mt-16 space-y-10 border-l border-foreground/10 pl-8 sm:pl-12">
           <div className="absolute left-0 top-0 h-full w-px bg-gradient-to-b from-primary via-accent to-transparent" />
           {timeline.map((t, i) => (
             <motion.li

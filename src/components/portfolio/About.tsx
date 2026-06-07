@@ -21,7 +21,7 @@ export function About() {
             className="relative"
           >
             <div className="absolute -inset-6 -z-10 rounded-[2rem] bg-gradient-primary opacity-20 blur-2xl" />
-            <div className="overflow-hidden rounded-3xl border border-white/10 shadow-elegant">
+            <div className="overflow-hidden rounded-3xl border border-foreground/10 shadow-elegant">
               <img
                 src={portrait}
                 alt="Alexander, software engineer"
@@ -59,7 +59,7 @@ export function About() {
               </p>
             </div>
 
-            <dl className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] sm:grid-cols-4">
+            <dl className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-foreground/10 bg-foreground/[0.04] sm:grid-cols-4">
               {stats.map((s) => (
                 <div key={s.label} className="bg-card/40 p-5">
                   <dt className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">

@@ -82,7 +82,7 @@ export function Projects() {
                       {p.tech.map((t) => (
                         <li
                           key={t}
-                          className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-muted-foreground"
+                          className="rounded-full border border-foreground/10 bg-foreground/[0.04] px-3 py-1 text-xs text-muted-foreground"
                         >
                           {t}
                         </li>
@@ -107,7 +107,7 @@ export function Projects() {
                     </a>
                     <a
                       href="#"
-                      className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-white/10"
+                      className="inline-flex items-center gap-1.5 rounded-full border border-foreground/10 bg-foreground/[0.04] px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-foreground/10"
                     >
                       <Github className="h-4 w-4" />
                       GitHub
