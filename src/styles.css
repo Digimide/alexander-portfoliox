@@ -77,6 +77,46 @@
   --shadow-card: 0 10px 40px -15px oklch(0.05 0.02 270 / 0.5);
 }
 
+.light {
+  --background: oklch(0.99 0.004 260);
+  --foreground: oklch(0.20 0.025 270);
+
+  --card: oklch(0.98 0.006 260);
+  --card-foreground: oklch(0.20 0.025 270);
+
+  --popover: oklch(0.98 0.006 260);
+  --popover-foreground: oklch(0.20 0.025 270);
+
+  --primary: oklch(0.55 0.22 290);
+  --primary-foreground: oklch(0.99 0.005 260);
+  --primary-glow: oklch(0.62 0.20 250);
+
+  --secondary: oklch(0.94 0.01 260);
+  --secondary-foreground: oklch(0.20 0.025 270);
+
+  --muted: oklch(0.95 0.008 260);
+  --muted-foreground: oklch(0.45 0.02 265);
+
+  --accent: oklch(0.58 0.16 220);
+  --accent-foreground: oklch(0.99 0.005 260);
+
+  --destructive: oklch(0.60 0.22 25);
+  --destructive-foreground: oklch(0.99 0.005 260);
+
+  --border: oklch(0.20 0.025 270 / 12%);
+  --input: oklch(0.20 0.025 270 / 10%);
+  --ring: oklch(0.55 0.22 290);
+
+  --gradient-hero: radial-gradient(ellipse 80% 60% at 50% 0%, oklch(0.55 0.22 290 / 0.18), transparent 60%),
+                   radial-gradient(ellipse 60% 50% at 80% 30%, oklch(0.58 0.16 220 / 0.14), transparent 70%),
+                   radial-gradient(ellipse 50% 50% at 10% 70%, oklch(0.55 0.22 320 / 0.10), transparent 70%);
+  --gradient-text: linear-gradient(135deg, oklch(0.22 0.03 270) 0%, oklch(0.45 0.18 290) 50%, oklch(0.50 0.16 220) 100%);
+
+  --shadow-glow: 0 0 60px -10px oklch(0.55 0.22 290 / 0.35);
+  --shadow-elegant: 0 20px 60px -20px oklch(0.20 0.025 270 / 0.18), 0 0 0 1px oklch(0.20 0.025 270 / 0.06);
+  --shadow-card: 0 10px 40px -15px oklch(0.20 0.025 270 / 0.12);
+}
+
 @theme inline {
   --color-primary-glow: var(--primary-glow);
   --animate-float: float 6s ease-in-out infinite;
