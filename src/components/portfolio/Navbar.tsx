@@ -57,22 +57,22 @@ export function Navbar() {
             ))}
           </nav>
 
-          <div className="hidden md:block">
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
             <a
               href="#contact"
-              className="inline-flex items-center justify-center rounded-full bg-gradient-primary px-5 py-2 text-sm font-medium text-primary-foreground shadow-glow transition-transform hover:scale-[1.03]"
+              className="hidden md:inline-flex items-center justify-center rounded-full bg-gradient-primary px-5 py-2 text-sm font-medium text-primary-foreground shadow-glow transition-transform hover:scale-[1.03]"
             >
               Book a Call
             </a>
+            <button
+              onClick={() => setOpen((v) => !v)}
+              aria-label="Toggle menu"
+              className="grid h-9 w-9 place-items-center rounded-full glass md:hidden"
+            >
+              {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+            </button>
           </div>
-
-          <button
-            onClick={() => setOpen((v) => !v)}
-            aria-label="Toggle menu"
-            className="grid h-9 w-9 place-items-center rounded-full glass md:hidden"
-          >
-            {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
-          </button>
         </div>
 
         {open && (
