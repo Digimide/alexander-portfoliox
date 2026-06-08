@@ -1,31 +1,42 @@
 import { motion } from "framer-motion";
-import { Braces, Layout, Server, Database, Cloud } from "lucide-react";
+import { Braces, Layout, Server, Database, Wrench, Sparkles } from "lucide-react";
 
 const groups = [
   {
     icon: Braces,
     title: "Languages",
-    items: ["JavaScript", "TypeScript", "Python", "PHP", "Java", "C#"],
+    items: ["JavaScript (ES6+)", "HTML5", "CSS3"],
   },
   {
     icon: Layout,
     title: "Frontend",
-    items: ["React", "Next.js", "Vue.js", "Tailwind CSS"],
+    items: ["React.js", "Next.js", "Tailwind CSS"],
   },
   {
     icon: Server,
     title: "Backend",
-    items: ["Node.js", "Express", "Laravel", "Django"],
+    items: ["Node.js", "Express.js"],
   },
   {
     icon: Database,
     title: "Databases",
-    items: ["PostgreSQL", "MySQL", "MongoDB", "Firebase"],
+    items: ["MongoDB", "Firebase"],
   },
   {
-    icon: Cloud,
-    title: "Cloud & DevOps",
-    items: ["AWS", "Docker", "Vercel", "GitHub Actions"],
+    icon: Wrench,
+    title: "Tools",
+    items: ["Git", "GitHub", "Vercel", "Netlify"],
+  },
+  {
+    icon: Sparkles,
+    title: "Additional Expertise",
+    items: [
+      "API Integration",
+      "Authentication Systems",
+      "Performance Optimization",
+      "Responsive Design",
+      "Deployment & Hosting",
+    ],
   },
 ];
 
@@ -39,7 +50,7 @@ export function Skills() {
             A modern stack, used with intention.
           </h2>
           <p className="mt-5 text-muted-foreground">
-            The right tool for the job — chosen for clarity, performance, and longevity.
+            The right tools, chosen for clarity, performance, and longevity.
           </p>
         </div>
 

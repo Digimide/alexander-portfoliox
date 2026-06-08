@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
-import portrait from "@/assets/alexander-portrait.jpg";
+import { MapPin, Globe2 } from "lucide-react";
+import portrait from "@/assets/ayomide-portrait.jpg";
 
 const stats = [
-  { value: "120+", label: "Projects completed" },
-  { value: "80+", label: "Happy clients" },
-  { value: "10", label: "Years experience" },
-  { value: "25+", label: "Technologies mastered" },
+  { value: "4+", label: "Years experience" },
+  { value: "30+", label: "Projects delivered" },
+  { value: "30%", label: "Faster load speeds" },
+  { value: "100%", label: "On-time delivery" },
 ];
 
 export function About() {
@@ -24,7 +25,7 @@ export function About() {
             <div className="overflow-hidden rounded-3xl border border-foreground/10 shadow-elegant">
               <img
                 src={portrait}
-                alt="Alexander, software engineer"
+                alt="Ayomide Alexander Abiola — Full-Stack Software Developer"
                 width={896}
                 height={1152}
                 loading="lazy"
@@ -40,23 +41,38 @@ export function About() {
             transition={{ duration: 0.8 }}
           >
             <p className="mb-4 text-xs uppercase tracking-[0.2em] text-primary">
-              About Alexander
+              About Me
             </p>
             <h2 className="font-display text-4xl font-semibold tracking-tight sm:text-5xl">
-              Engineering that compounds in value.
+              Engineering products that <span className="text-gradient">scale</span>.
             </h2>
             <div className="mt-6 space-y-5 text-muted-foreground">
               <p>
-                I'm a full-stack engineer with a decade of experience building digital
-                products for ambitious teams — from seed-stage startups to publicly listed
-                enterprises. My focus is on resilient architecture, exceptional UX, and
-                code that ages well.
+                I'm a Full-Stack Software Developer with over 4 years of hands-on
+                experience building scalable, responsive, and user-focused web
+                applications.
               </p>
               <p>
-                I've shipped products across fintech, healthtech, e-commerce, developer
-                tooling, and AI. I care about systems that don't just ship, but compound:
-                fast feedback loops, clean abstractions, and a strong design point of view.
+                I specialize in the JavaScript ecosystem — React, Next.js, Node.js,
+                Express.js — and modern cloud deployment platforms. I've shipped
+                client-facing applications across multiple industries, focusing on
+                performance, clean architecture, usability, and business growth.
               </p>
+              <p>
+                I enjoy turning ideas into production-ready software that creates
+                real-world impact and measurable results.
+              </p>
+            </div>
+
+            <div className="mt-8 flex flex-wrap gap-3 text-sm">
+              <span className="inline-flex items-center gap-2 rounded-full glass px-4 py-2 text-foreground/90">
+                <MapPin className="h-4 w-4 text-primary" />
+                Ohio, United States
+              </span>
+              <span className="inline-flex items-center gap-2 rounded-full glass px-4 py-2 text-foreground/90">
+                <Globe2 className="h-4 w-4 text-primary" />
+                Available Worldwide / Remote
+              </span>
             </div>
 
             <dl className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-foreground/10 bg-foreground/[0.04] sm:grid-cols-4">

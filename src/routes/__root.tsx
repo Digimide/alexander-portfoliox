@@ -77,18 +77,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "A premium web presence showcasing software developer Alexander's expertise and projects with a modern, Stripe-inspired design." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "A premium web presence showcasing software developer Alexander's expertise and projects with a modern, Stripe-inspired design." },
+      { name: "author", content: "Ayomide Alexander Abiola" },
+      { property: "og:site_name", content: "Ayomide Alexander Abiola" },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
-      { name: "twitter:description", content: "A premium web presence showcasing software developer Alexander's expertise and projects with a modern, Stripe-inspired design." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d82ba391-381c-4c15-a690-306a85e54722/id-preview-d27e17d3--d8f3a957-f51e-433c-9097-292a8a7e392d.lovable.app-1780833114679.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d82ba391-381c-4c15-a690-306a85e54722/id-preview-d27e17d3--d8f3a957-f51e-433c-9097-292a8a7e392d.lovable.app-1780833114679.png" },
     ],
     links: [
       {
