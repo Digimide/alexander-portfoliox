@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 import { WHATSAPP_URL } from "@/lib/contact";
-import logoAsset from "@/assets/digimide-logo.jpg.asset.json";
+import { LOGO_URL } from "@/lib/contact";
 
 const links = [
   { href: "#home", label: "Home" },
@@ -43,7 +43,7 @@ export function Navbar() {
         >
           <a href="#home" className="flex items-center gap-2.5 font-semibold tracking-tight">
             <img
-              src={logoAsset.url}
+              src={LOGO_URL}
               alt="Digimide"
               className="h-8 w-8 rounded-lg object-cover ring-1 ring-foreground/10"
             />

@@ -5,6 +5,6 @@ export const EMAIL_HREF = `mailto:${EMAIL}`;
 export const LINKEDIN_URL = "https://linkedin.com/in/abiola-ayomide-5796022aa";
 export const GITHUB_URL = "https://github.com/Xzavior34";
 
-import cvAsset from "@/assets/ayomide-cv.pdf.asset.json";
-export const CV_URL = cvAsset.url;
 export const CV_FILENAME = "Ayomide-Alexander-Abiola-CV.pdf";
+export const CV_URL = `/${CV_FILENAME}`;
+export const LOGO_URL = "/digimide-logo.jpg";
