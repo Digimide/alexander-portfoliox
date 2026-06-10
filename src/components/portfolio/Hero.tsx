@@ -8,14 +8,8 @@ export function Hero() {
       id="home"
       className="relative isolate overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-24 lg:pt-48 lg:pb-32"
     >
-      <div className="absolute inset-0 -z-10 bg-hero-glow" aria-hidden />
-      <div className="absolute inset-0 -z-10 grid-bg" aria-hidden />
-
-      <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden>
-        <div className="absolute left-[10%] top-[20%] h-72 w-72 rounded-full bg-primary/20 blur-3xl animate-float" />
-        <div className="absolute right-[8%] top-[40%] h-80 w-80 rounded-full bg-accent/15 blur-3xl animate-float-slow" />
-        <div className="absolute left-[40%] bottom-[10%] h-64 w-64 rounded-full bg-primary-glow/15 blur-3xl animate-float" />
-      </div>
+      <div className="absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-foreground/10 to-transparent" aria-hidden />
+      <div className="absolute inset-0 -z-10 grid-bg opacity-60" aria-hidden />
 
       <div className="mx-auto max-w-5xl px-4 sm:px-6 text-center">
         <motion.div
@@ -44,7 +38,7 @@ export function Hero() {
           className="font-display text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl lg:text-[5rem] lg:leading-[1.05]"
         >
           <span className="text-foreground">Full-Stack Developer building </span>
-          <span className="text-gradient">fast, scalable</span>
+          <span className="text-foreground/70">fast, scalable</span>
           <span className="text-foreground"> digital products.</span>
         </motion.h1>
 
