@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 import { WHATSAPP_URL } from "@/lib/contact";
+import logoAsset from "@/assets/digimide-logo.jpg.asset.json";
 
 const links = [
   { href: "#home", label: "Home" },
@@ -10,6 +11,7 @@ const links = [
   { href: "#skills", label: "Skills" },
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
+  { href: "#resume", label: "Resume" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -39,10 +41,12 @@ export function Navbar() {
             scrolled ? "glass shadow-elegant" : "bg-transparent"
           }`}
         >
-          <a href="#home" className="flex items-center gap-2 font-semibold tracking-tight">
-            <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-primary text-sm font-bold text-primary-foreground shadow-glow">
-              A
-            </span>
+          <a href="#home" className="flex items-center gap-2.5 font-semibold tracking-tight">
+            <img
+              src={logoAsset.url}
+              alt="Digimide"
+              className="h-8 w-8 rounded-lg object-cover ring-1 ring-foreground/10"
+            />
             <span className="text-foreground">Ayomide</span>
           </a>
 

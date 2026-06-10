@@ -1,4 +1,5 @@
 import { Github, Linkedin, MessageCircle, Mail } from "lucide-react";
+import logoAsset from "@/assets/digimide-logo.jpg.asset.json";
 import { WHATSAPP_URL, EMAIL, EMAIL_HREF, LINKEDIN_URL, GITHUB_URL } from "@/lib/contact";
 
 export function Footer() {
@@ -6,10 +7,12 @@ export function Footer() {
     <footer className="border-t border-foreground/5 py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
-          <div className="flex items-center gap-2 font-semibold tracking-tight">
-            <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-primary text-sm font-bold text-primary-foreground">
-              A
-            </span>
+          <div className="flex items-center gap-2.5 font-semibold tracking-tight">
+            <img
+              src={logoAsset.url}
+              alt="Digimide"
+              className="h-8 w-8 rounded-lg object-cover ring-1 ring-foreground/10"
+            />
             <span>Ayomide Alexander Abiola</span>
           </div>
 
