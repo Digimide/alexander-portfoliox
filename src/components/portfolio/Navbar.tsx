@@ -43,7 +43,7 @@ export function Navbar() {
         >
           <a href="#home" className="flex items-center gap-2.5 font-semibold tracking-tight">
             <img
-              src={logoAsset.url}
+              src={LOGO_URL}
               alt="Digimide"
               className="h-8 w-8 rounded-lg object-cover ring-1 ring-foreground/10"
             />
