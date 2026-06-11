@@ -1,91 +1,68 @@
 import { motion } from "framer-motion";
-import {
-  Clock,
-  CheckCircle2,
-  Layers,
-  Gauge,
-  Building2,
-  Lightbulb,
-  MessagesSquare,
-  LifeBuoy,
-} from "lucide-react";
+import { Layers, Gauge, Building2, MessagesSquare } from "lucide-react";
 
 const reasons = [
   {
-    icon: Clock,
-    title: "4+ Years Experience",
-    body: "Real, hands-on experience shipping production software across industries.",
-  },
-  {
-    icon: CheckCircle2,
-    title: "100% On-Time Delivery",
-    body: "Every project delivered on schedule — without compromising quality.",
-  },
-  {
     icon: Layers,
     title: "Modern Tech Stack",
-    body: "React, Next.js, Node.js, and the tooling top engineering teams rely on.",
+    body: "React, Next.js, Node.js, and the tooling top engineering teams rely on — applied with senior-level craft on every release.",
   },
   {
     icon: Gauge,
-    title: "Performance-Focused",
-    body: "Up to 30% faster load speeds through deliberate optimization.",
+    title: "Performance-Focused Engineering",
+    body: "Up to 30% faster load speeds through deliberate optimization, Core Web Vitals audits, and lean architecture decisions.",
   },
   {
     icon: Building2,
     title: "Scalable Architecture",
-    body: "Systems designed to grow with your business, not break under it.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Business-Oriented",
-    body: "Engineering decisions tied to real outcomes — conversions, retention, growth.",
+    body: "Systems designed to grow with your business — clean boundaries, observability, and infrastructure that holds up under load.",
   },
   {
     icon: MessagesSquare,
-    title: "Clear Communication",
-    body: "Frequent updates, no surprises, and easy collaboration end to end.",
-  },
-  {
-    icon: LifeBuoy,
-    title: "Long-Term Support",
-    body: "Ongoing maintenance, improvements, and technical guidance after launch.",
+    title: "Long-Term Partnership",
+    body: "Frequent updates, no surprises, ongoing maintenance, and technical guidance well after launch — built for trust.",
   },
 ];
 
 export function Services() {
   return (
-    <section id="services" className="relative py-20 sm:py-28 lg:py-36">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="mb-4 text-xs uppercase tracking-[0.2em] text-primary">
-            Why work with me
-          </p>
-          <h2 className="font-display text-4xl font-semibold tracking-tight sm:text-5xl">
-            A partner you can build with.
+    <section id="why-choose" className="relative py-20 sm:py-28 lg:py-36">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.7 }}
+          className="mx-auto max-w-2xl text-center"
+        >
+          <h2 className="font-display text-4xl font-bold tracking-tight sm:text-5xl">
+            Why Choose Ayomide?
           </h2>
           <p className="mt-5 text-muted-foreground">
-            Whether you're shipping v1 or scaling to your next inflection point — I plug in
-            and move the needle.
+            Senior-level engineering, performance-first thinking, and partnerships built to
+            deliver web and AI at scale.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-4 sm:grid-cols-2">
           {reasons.map((s, i) => (
             <motion.div
               key={s.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.6, delay: i * 0.04 }}
-              className="group relative overflow-hidden rounded-2xl glass p-6 shadow-card-soft transition-all hover:-translate-y-1 hover:shadow-elegant"
+              transition={{ duration: 0.6, delay: i * 0.06 }}
+              className="group rounded-[2rem] glass p-7 sm:p-8 transition-all hover:-translate-y-1"
             >
-              <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-gradient-primary opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-30" />
-              <s.icon className="h-6 w-6 text-primary" />
-              <h3 className="mt-5 font-display text-base font-semibold tracking-tight">
+              <div className="grid h-12 w-12 place-items-center rounded-2xl glass text-foreground">
+                <s.icon className="h-5 w-5" />
+              </div>
+              <h3 className="mt-5 font-display text-lg font-semibold tracking-tight">
                 {s.title}
               </h3>
-              <p className="mt-2 text-sm text-muted-foreground">{s.body}</p>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {s.body}
+              </p>
             </motion.div>
           ))}
         </div>
