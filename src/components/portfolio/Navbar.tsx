@@ -37,8 +37,8 @@ export function Navbar() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div
-          className={`flex items-center justify-between rounded-full px-4 sm:px-5 py-2.5 transition-all duration-500 ${
-            scrolled ? "glass shadow-elegant" : "bg-transparent"
+          className={`flex items-center justify-between rounded-full px-4 sm:px-5 py-2.5 transition-all duration-500 glass ${
+            scrolled ? "shadow-elegant" : ""
           }`}
         >
           <a href="#home" className="flex items-center gap-2.5 font-semibold tracking-tight">
