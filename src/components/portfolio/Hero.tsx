@@ -1,32 +1,46 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, MessageCircle } from "lucide-react";
-import { WHATSAPP_URL } from "@/lib/contact";
+import { ArrowRight, Download } from "lucide-react";
+import { CV_URL, CV_FILENAME } from "@/lib/contact";
 
 export function Hero() {
+  const stats = [
+    { v: "4+", l: "Years\nExperience" },
+    { v: "30+", l: "Projects\nDelivered" },
+    { v: "30%", l: "Faster Load\nSpeeds" },
+    { v: "100%", l: "On-Time\nDelivery" },
+  ];
+
   return (
     <section
       id="home"
       className="relative isolate overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-24 lg:pt-48 lg:pb-32"
     >
-      <div className="absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-foreground/10 to-transparent" aria-hidden />
-      <div className="absolute inset-0 -z-10 grid-bg opacity-60" aria-hidden />
+      {/* Soft ambient refractions */}
+      <div
+        className="pointer-events-none absolute -top-32 -left-20 -z-10 h-[40vh] w-[50vw] rounded-full bg-foreground/[0.04] blur-[120px]"
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute -bottom-24 -right-16 -z-10 h-[30vh] w-[40vw] rounded-full bg-foreground/[0.03] blur-[100px]"
+        aria-hidden
+      />
 
       <div className="mx-auto max-w-5xl px-4 sm:px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="mx-auto mb-8 inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs text-muted-foreground"
+          className="mx-auto mb-8 inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-[10px] font-medium uppercase tracking-widest text-muted-foreground"
         >
-          <Sparkles className="h-3.5 w-3.5 text-primary" />
-          <span>Available worldwide · Open to new projects</span>
+          <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(16,185,129,0.5)]" />
+          Available for new projects
         </motion.div>
 
         <motion.p
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.02 }}
-          className="mb-4 text-sm font-medium tracking-wide text-primary"
+          className="mb-4 text-sm font-medium tracking-wide text-muted-foreground"
         >
           Ayomide Alexander Abiola
         </motion.p>
@@ -35,45 +49,42 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.05 }}
-          className="font-display text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl lg:text-[5rem] lg:leading-[1.05]"
+          className="font-display text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-[5rem] lg:leading-[1.05]"
         >
           <span className="text-foreground">Full-Stack Developer building </span>
-          <span className="text-foreground/70">fast, scalable</span>
-          <span className="text-foreground"> digital products.</span>
+          <span className="text-foreground/50">fast, scalable digital products.</span>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.15 }}
-          className="mx-auto mt-8 max-w-2xl text-balance text-base text-muted-foreground sm:text-lg"
+          className="mx-auto mt-8 max-w-2xl text-balance text-sm text-muted-foreground sm:text-base"
         >
           I help startups, founders, and business owners transform ideas into modern web
-          applications and websites using React, Next.js, Node.js, and cutting-edge
-          technologies.
+          applications using React, Next.js, Node.js, and cutting-edge technologies.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.25 }}
-          className="mt-10 flex flex-wrap items-center justify-center gap-3"
+          className="mx-auto mt-10 flex w-full max-w-sm flex-col gap-3 sm:max-w-none sm:flex-row sm:justify-center"
         >
           <a
             href="#projects"
-            className="group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-5 sm:px-6 py-3 text-sm font-medium text-primary-foreground shadow-glow transition-transform hover:scale-[1.03]"
+            className="group inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-foreground px-6 py-4 text-sm font-semibold text-background shadow-glow transition-transform active:scale-[0.98] sm:w-auto"
           >
             View My Work
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </a>
           <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full glass px-5 sm:px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-foreground/10"
+            href={CV_URL}
+            download={CV_FILENAME}
+            className="inline-flex w-full items-center justify-center gap-2 rounded-2xl glass px-6 py-4 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/10 active:scale-[0.98] sm:w-auto"
           >
-            <MessageCircle className="h-4 w-4" />
-            Book a Discovery Call
+            <Download className="h-4 w-4" />
+            Download Resume
           </a>
         </motion.div>
 
@@ -81,19 +92,17 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6, duration: 1 }}
-          className="mx-auto mt-20 grid max-w-3xl grid-cols-2 gap-4 sm:grid-cols-4"
+          className="mx-auto mt-16 grid max-w-3xl grid-cols-2 gap-3 sm:grid-cols-4"
         >
-          {[
-            { v: "4+", l: "Years experience" },
-            { v: "30+", l: "Projects delivered" },
-            { v: "30%", l: "Faster load speeds" },
-            { v: "100%", l: "On-time delivery" },
-          ].map((s) => (
-            <div key={s.l} className="glass rounded-2xl px-4 py-4 text-left">
-              <div className="font-display text-2xl font-semibold tracking-tight sm:text-3xl">
+          {stats.map((s) => (
+            <div
+              key={s.v + s.l}
+              className="glass rounded-[2rem] p-5 text-left"
+            >
+              <div className="font-display text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
                 {s.v}
               </div>
-              <div className="mt-1 text-[11px] uppercase tracking-wide text-muted-foreground">
+              <div className="mt-1 whitespace-pre-line text-[10px] font-semibold uppercase tracking-wider leading-tight text-muted-foreground">
                 {s.l}
               </div>
             </div>

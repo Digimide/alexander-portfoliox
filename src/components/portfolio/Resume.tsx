@@ -29,11 +29,11 @@ export function Resume() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="mt-12 rounded-3xl border border-foreground/10 bg-foreground/[0.03] p-6 sm:p-10"
+          className="mt-12 rounded-[2rem] glass p-6 sm:p-10"
         >
           <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-center gap-4">
-              <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-gradient-primary text-primary-foreground shadow-glow">
+              <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl glass text-foreground">
                 <FileText className="h-6 w-6" />
               </div>
               <div className="text-left">
@@ -49,7 +49,7 @@ export function Resume() {
                 href={CV_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-foreground/10 bg-foreground/[0.04] px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-foreground/10"
+                className="inline-flex items-center gap-2 rounded-2xl glass px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/10"
               >
                 <Eye className="h-4 w-4" />
                 Preview
@@ -57,7 +57,7 @@ export function Resume() {
               <a
                 href={CV_URL}
                 download={CV_FILENAME}
-                className="group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-glow transition-transform hover:scale-[1.03]"
+                className="group inline-flex items-center gap-2 rounded-2xl bg-foreground px-5 py-2.5 text-sm font-semibold text-background transition-transform hover:scale-[1.03]"
               >
                 <Download className="h-4 w-4" />
                 Download CV
