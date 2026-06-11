@@ -58,9 +58,24 @@ export function Contact() {
 
   return (
     <section id="contact" className="relative py-20 sm:py-28 lg:py-36">
-      <div className="absolute inset-x-0 top-0 -z-10 mx-auto h-[400px] max-w-5xl bg-hero-glow opacity-60" />
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="grid gap-12 lg:grid-cols-5">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.7 }}
+          className="mx-auto max-w-2xl text-center"
+        >
+          <h2 className="font-display text-4xl font-bold tracking-tight sm:text-5xl">
+            Let's Build Something Together
+          </h2>
+          <p className="mt-5 text-muted-foreground">
+            Ready to start your project? Get in touch and let's discuss how I can help bring
+            your vision to life.
+          </p>
+        </motion.div>
+
+        <div className="mt-14 grid gap-12 lg:grid-cols-5">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -68,35 +83,32 @@ export function Contact() {
             transition={{ duration: 0.7 }}
             className="lg:col-span-2"
           >
-            <p className="mb-4 text-xs uppercase tracking-[0.2em] text-primary">
-              Get in touch
-            </p>
-            <h2 className="font-display text-4xl font-semibold tracking-tight sm:text-5xl">
-              Let's build something <span className="text-gradient">amazing</span>.
-            </h2>
-            <p className="mt-5 text-muted-foreground">
-              Have a project in mind or need a developer for your team? Let's discuss how
-              I can help bring your ideas to life.
+            <h3 className="font-display text-xl font-bold tracking-tight">Get in Touch</h3>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Whether you need a full-stack application, AI integration, or technical
+              consultation — I'm ready to help bring your vision to life.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-3">
+
+            <div className="mt-7 flex flex-wrap gap-3">
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-primary px-5 py-3 text-sm font-medium text-primary-foreground shadow-glow transition-transform hover:scale-[1.03]"
+                className="inline-flex items-center gap-2 rounded-2xl bg-foreground px-5 py-3 text-sm font-semibold text-background transition-transform hover:scale-[1.03]"
               >
                 <MessageCircle className="h-4 w-4" />
                 Chat on WhatsApp
               </a>
               <a
                 href={EMAIL_HREF}
-                className="inline-flex items-center gap-2 rounded-full glass px-5 py-3 text-sm font-medium text-foreground transition-colors hover:bg-foreground/10"
+                className="inline-flex items-center gap-2 rounded-2xl glass px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/10"
               >
                 <Mail className="h-4 w-4" />
                 Send Email
               </a>
             </div>
+
 
             <div className="mt-10 space-y-3">
               {[
@@ -145,7 +157,7 @@ export function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="glass relative rounded-3xl p-6 sm:p-8 shadow-elegant lg:col-span-3"
+            className="glass relative rounded-[2rem] p-6 sm:p-8 lg:col-span-3"
             noValidate
           >
             {/* Honeypot field for anti-spam */}
@@ -215,21 +227,22 @@ export function Contact() {
             <div className="mt-7 flex flex-wrap gap-3">
               <button
                 type="submit"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-primary px-5 sm:px-6 py-3 text-sm font-medium text-primary-foreground shadow-glow transition-transform hover:scale-[1.02]"
+                className="inline-flex items-center justify-center gap-2 rounded-2xl bg-foreground px-6 py-3 text-sm font-semibold text-background transition-transform hover:scale-[1.02]"
               >
-                Send message
+                Send Message
                 <Send className="h-4 w-4" />
               </button>
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full glass px-5 sm:px-6 py-3 text-sm font-medium text-foreground hover:bg-foreground/10"
+                className="inline-flex items-center justify-center gap-2 rounded-2xl glass px-6 py-3 text-sm font-semibold text-foreground hover:bg-foreground/10"
               >
                 <MessageCircle className="h-4 w-4" />
                 Or message on WhatsApp
               </a>
             </div>
+
           </motion.form>
         </div>
       </div>
